@@ -1,12 +1,33 @@
 {
-  "mcpServers": {
-    "qmoosa-reality-gate": {
-      "command": "node",
-      "args": ["dist/index.js", "--mcp"],
-      "env": {
-        "QUICKNODE_RPC": "https://api.quicknode.com/demo",
-        "PQC_STANDARD": "NIST-FIPS-204"
+  "name": "pope-ai-mcp",
+  "version": "1.0.0",
+  "description": "Pope AI Model Context Protocol Server for Universal Algor-Ethics & Interfaith Peace Arbitration",
+  "tools": [
+    {
+      "name": "evaluate_algor_ethics",
+      "description": "Audit algorithms against the Rome Call for AI Ethics (Transparency, Inclusion, Responsibility, Impartiality, Reliability, Security)",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "model_signature": { "type": "string" },
+          "training_corpus": { "type": "string" },
+          "audit_parameters": { "type": "array", "items": { "type": "string" } }
+        },
+        "required": ["model_signature", "audit_parameters"]
+      }
+    },
+    {
+      "name": "route_interfaith_aid",
+      "description": "Disburse zero-leakage almsgiving to verified humanitarian and ecological initiatives",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "initiative": { "type": "string" },
+          "recipient": { "type": "string" },
+          "amount_wei": { "type": "string" }
+        },
+        "required": ["initiative", "recipient", "amount_wei"]
       }
     }
-  }
+  ]
 }
